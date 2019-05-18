@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECE9E9"
+    tools:context=".VerifyPhoneActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_margin="8dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#304FFE"
+            android:text="код подтверждения"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textSize="24sp"/>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_gravity="center"
+            android:id="@+id/animation_view"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            app:lottie_autoPlay="true"
+            app:lottie_rawRes="@raw/verification"
+            app:lottie_loop="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="@string/verify_text"
+            android:textColor="#030303"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            />
+
+        <EditText
+            android:textColor="#030303"
+            android:background="#2F304FFE"
+            android:layout_marginRight="120dp"
+            android:layout_marginLeft="120dp"
+            android:maxLength="5"
+            android:hint="XXXXXX"
+            android:inputType="number"
+            android:textColorHint="#fff"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:id="@+id/edit_verify_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/button_verify_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:text="Подтвердить"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            android:background="#2330F2"/>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</RelativeLayout>
